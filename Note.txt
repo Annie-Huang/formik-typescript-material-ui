@@ -4,6 +4,9 @@ https://github.com/bmvantunes/youtube-2020-jan-formik-typescript-materialui
 https://github.com/Annie-Huang/formik-typescript-material-ui
 
 https://mui.com/material-ui/getting-started/installation/
+https://mui.com/material-ui/react-card/
+https://mui.com/material-ui/react-typography/
+
 ------------------------------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-typescript-material-ui --template typescript --use-npm
