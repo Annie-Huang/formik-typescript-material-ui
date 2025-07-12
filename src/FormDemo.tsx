@@ -1,6 +1,6 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
-import { Formik } from 'formik';
+import { Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 
 const initialValues: InvestmentDetails = {
@@ -18,7 +18,11 @@ export const FormDemo = () => {
       <CardContent>
         <Typography variant='h4'>New Account</Typography>
         <Formik initialValues={initialValues} onSubmit={() => {}}>
-          {({ values, errors, isSubmitting, isValidating }) => <div></div>}
+          {({ values, errors, isSubmitting, isValidating }) => (
+            <Form>
+              <pre>{JSON.stringify(values, null, 4)}</pre>
+            </Form>
+          )}
         </Formik>
       </CardContent>
     </Card>
