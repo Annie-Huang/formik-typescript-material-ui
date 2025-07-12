@@ -2,8 +2,6 @@ import React from 'react';
 import {
   Card,
   CardContent,
-  Checkbox,
-  FormControlLabel,
   MenuItem,
   TextField,
   Typography,
@@ -49,7 +47,21 @@ export const FormDemo = () => {
               {/*<Field name='investmentRisk' value='High' type='checkbox' />*/}
               {/*<Field name='investmentRisk' value='Medium' type='checkbox' />*/}
               {/*<Field name='investmentRisk' value='Low' type='checkbox' />*/}
-              <MyCheckbox />
+              <MyCheckbox
+                name='investmentRisk'
+                value='High'
+                label='High - Super Risky'
+              />
+              <MyCheckbox
+                name='investmentRisk'
+                value='Medium'
+                label='Medium - Risky'
+              />
+              <MyCheckbox
+                name='investmentRisk'
+                value='Low'
+                label='Low - Safe'
+              />
 
               {/*<Field name='commentAboutInvestmentRisk' as='textarea' />*/}
               <Field
