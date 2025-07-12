@@ -1,5 +1,11 @@
 import React from 'react';
-import { Card, CardContent, TextField, Typography } from '@mui/material';
+import {
+  Card,
+  CardContent,
+  MenuItem,
+  TextField,
+  Typography,
+} from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 
@@ -51,13 +57,21 @@ export const FormDemo = () => {
                 variant='standard'
               />
 
-              <Field name='dependents' as='select'>
-                <option value={0}>0</option>
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-                <option value={5}>5</option>
+              {/*<Field name='dependents' as='select'>*/}
+              {/*  <option value={0}>0</option>*/}
+              {/*  <option value={1}>1</option>*/}
+              {/*  <option value={2}>2</option>*/}
+              {/*  <option value={3}>3</option>*/}
+              {/*  <option value={4}>4</option>*/}
+              {/*  <option value={5}>5</option>*/}
+              {/*</Field>*/}
+              <Field name='dependents' as={TextField} select>
+                <MenuItem value={0}>0</MenuItem>
+                <MenuItem value={1}>1</MenuItem>
+                <MenuItem value={2}>2</MenuItem>
+                <MenuItem value={3}>3</MenuItem>
+                <MenuItem value={4}>4</MenuItem>
+                <MenuItem value={5}>5</MenuItem>
               </Field>
 
               {/* If you don't add value into the checkbox field like the investmentRisk field, it will just default to true|false value */}
