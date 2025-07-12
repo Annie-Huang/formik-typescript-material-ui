@@ -91,7 +91,11 @@ export const FormDemo = () => {
               </Field>
 
               {/* If you don't add value into the checkbox field like the investmentRisk field, it will just default to true|false value */}
-              <Field name='acceptedTermsAndConditions' type='checkbox' />
+              {/*<Field name='acceptedTermsAndConditions' type='checkbox' />*/}
+              <MyCheckbox
+                name='acceptedTermsAndConditions'
+                label='Accept terms and conditions'
+              />
 
               <pre>{JSON.stringify(values, null, 4)}</pre>
             </Form>
