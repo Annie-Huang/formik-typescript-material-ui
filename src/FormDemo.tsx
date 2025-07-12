@@ -79,6 +79,7 @@ export const FormDemo = () => {
                   rows={3}
                   rowsMax={10}
                   variant='standard'
+                  label='Comment About Investment Risk'
                 />
               </FormGroup>
 
@@ -91,7 +92,13 @@ export const FormDemo = () => {
                 {/*  <option value={4}>4</option>*/}
                 {/*  <option value={5}>5</option>*/}
                 {/*</Field>*/}
-                <Field name='dependents' as={TextField} select>
+                <Field
+                  name='dependents'
+                  label='dependents'
+                  as={TextField}
+                  select
+                  variant='standard'
+                >
                   <MenuItem value={0}>0</MenuItem>
                   <MenuItem value={1}>1</MenuItem>
                   <MenuItem value={2}>2</MenuItem>
