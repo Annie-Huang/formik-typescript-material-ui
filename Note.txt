@@ -6,9 +6,10 @@ https://github.com/Annie-Huang/formik-typescript-material-ui
 https://mui.com/material-ui/getting-started/installation/
 https://mui.com/material-ui/react-card/
 https://mui.com/material-ui/react-typography/
-
+https://formik.org/docs/overview
 ------------------------------------------------------------------------------------------
 
 PS C:\react> npx create-react-app formik-typescript-material-ui --template typescript --use-npm
 PS C:\react\formik-typescript-material-ui> npm install @mui/material @emotion/react @emotion/styled
 PS C:\react\formik-typescript-material-ui> npm install @mui/material @mui/styled-engine-sc styled-components
+PS C:\react\formik-typescript-material-ui> npm install formik --save
