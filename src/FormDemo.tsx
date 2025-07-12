@@ -10,6 +10,7 @@ import {
 } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
+import { MyCheckbox } from './MyCheckbox';
 
 const initialValues: InvestmentDetails = {
   fullName: '',
@@ -48,10 +49,7 @@ export const FormDemo = () => {
               {/*<Field name='investmentRisk' value='High' type='checkbox' />*/}
               {/*<Field name='investmentRisk' value='Medium' type='checkbox' />*/}
               {/*<Field name='investmentRisk' value='Low' type='checkbox' />*/}
-              <FormControlLabel
-                control={<Checkbox defaultChecked />}
-                label='Label'
-              />
+              <MyCheckbox />
 
               {/*<Field name='commentAboutInvestmentRisk' as='textarea' />*/}
               <Field
