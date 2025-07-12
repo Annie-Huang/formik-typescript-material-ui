@@ -1,15 +1,23 @@
 import React from 'react';
 import { Card, CardContent, Typography } from '@mui/material';
 import { Formik } from 'formik';
+import { InvestmentDetails } from './InvestmentDetails';
 
-const INITIAL_FORM_STATE = {};
+const initialValues: InvestmentDetails = {
+  fullName: '',
+  initialInvestment: 0,
+  investmentRisk: [],
+  commentAboutInvestmentRisk: '',
+  dependents: -1,
+  acceptedTermsAndConditions: false,
+};
 
 export const FormDemo = () => {
   return (
     <Card>
       <CardContent>
         <Typography variant='h4'>New Account</Typography>
-        <Formik initialValues={{ ...INITIAL_FORM_STATE }} onSubmit={() => {}}>
+        <Formik initialValues={initialValues} onSubmit={() => {}}>
           {({ values, errors, isSubmitting, isValidating }) => <div></div>}
         </Formik>
       </CardContent>
