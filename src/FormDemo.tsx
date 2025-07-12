@@ -41,7 +41,15 @@ export const FormDemo = () => {
               <Field name='investmentRisk' value='Medium' type='checkbox' />
               <Field name='investmentRisk' value='Low' type='checkbox' />
 
-              <Field name='commentAboutInvestmentRisk' as='textarea' />
+              {/*<Field name='commentAboutInvestmentRisk' as='textarea' />*/}
+              <Field
+                name='commentAboutInvestmentRisk'
+                as={TextField}
+                multiline
+                rows={3}
+                rowsMax={10}
+                variant='standard'
+              />
 
               <Field name='dependents' as='select'>
                 <option value={0}>0</option>
