@@ -2,6 +2,8 @@ import React from 'react';
 import {
   Card,
   CardContent,
+  Checkbox,
+  FormControlLabel,
   MenuItem,
   TextField,
   Typography,
@@ -43,9 +45,13 @@ export const FormDemo = () => {
                 variant='standard'
               />
 
-              <Field name='investmentRisk' value='High' type='checkbox' />
-              <Field name='investmentRisk' value='Medium' type='checkbox' />
-              <Field name='investmentRisk' value='Low' type='checkbox' />
+              {/*<Field name='investmentRisk' value='High' type='checkbox' />*/}
+              {/*<Field name='investmentRisk' value='Medium' type='checkbox' />*/}
+              {/*<Field name='investmentRisk' value='Low' type='checkbox' />*/}
+              <FormControlLabel
+                control={<Checkbox defaultChecked />}
+                label='Label'
+              />
 
               {/*<Field name='commentAboutInvestmentRisk' as='textarea' />*/}
               <Field
