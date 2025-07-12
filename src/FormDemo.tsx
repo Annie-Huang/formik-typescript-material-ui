@@ -23,6 +23,10 @@ export const FormDemo = () => {
               <Field name='fullName' />
               <Field name='initialInvestment' type='number' />
 
+              <Field name='investmentRisk' value='High' type='checkbox' />
+              <Field name='investmentRisk' value='Medium' type='checkbox' />
+              <Field name='investmentRisk' value='Low' type='checkbox' />
+
               <pre>{JSON.stringify(values, null, 4)}</pre>
             </Form>
           )}
