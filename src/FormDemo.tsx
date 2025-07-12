@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, Typography } from '@mui/material';
+import { Card, CardContent, TextField, Typography } from '@mui/material';
 import { Field, Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 
@@ -20,8 +20,22 @@ export const FormDemo = () => {
         <Formik initialValues={initialValues} onSubmit={() => {}}>
           {({ values, errors, isSubmitting, isValidating }) => (
             <Form>
-              <Field name='fullName' />
-              <Field name='initialInvestment' type='number' />
+              {/*<Field name='fullName' />*/}
+              <Field
+                name='fullName'
+                as={TextField}
+                label='Full Name'
+                variant='standard'
+              />
+
+              {/*<Field name='initialInvestment' type='number' />*/}
+              <Field
+                name='initialInvestment'
+                type='number'
+                as={TextField}
+                label='Initial Investment'
+                variant='standard'
+              />
 
               <Field name='investmentRisk' value='High' type='checkbox' />
               <Field name='investmentRisk' value='Medium' type='checkbox' />
