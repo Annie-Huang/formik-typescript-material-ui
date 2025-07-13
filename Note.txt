@@ -16,6 +16,7 @@ https://mui.com/material-ui/react-checkbox/#label
 
 https://formik.org/docs/api/useField
 https://mui.com/material-ui/react-box/
+https://formik.org/docs/guides/validation
 
 ------------------------------------------------------------------------------------------
 
@@ -23,3 +24,4 @@ PS C:\react> npx create-react-app formik-typescript-material-ui --template types
 PS C:\react\formik-typescript-material-ui> npm install @mui/material @emotion/react @emotion/styled
 PS C:\react\formik-typescript-material-ui> npm install @mui/material @mui/styled-engine-sc styled-components
 PS C:\react\formik-typescript-material-ui> npm install formik --save
+PS C:\react\formik-typescript-material-ui> npm install yup --save
