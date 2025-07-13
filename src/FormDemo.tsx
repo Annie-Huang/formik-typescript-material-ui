@@ -24,7 +24,7 @@ const initialValues: InvestmentDetails = {
 };
 
 const FORM_VALIDATION = Yup.object().shape({
-  fullName: string().required().min(2).max(100),
+  fullName: string().required('Your name is mandatory!!!').min(2).max(100),
   initialInvestment: number().required().min(100),
   dependents: number().required().min(0).max(5),
   acceptedTermsAndConditions: boolean().oneOf([true]),
