@@ -12,7 +12,7 @@ import { Field, Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 import { MyCheckbox } from './MyCheckbox';
 import * as Yup from 'yup';
-import { boolean, number, string } from 'yup';
+import { array, boolean, number, string } from 'yup';
 
 const initialValues: InvestmentDetails = {
   fullName: '',
@@ -28,6 +28,7 @@ const FORM_VALIDATION = Yup.object().shape({
   initialInvestment: number().required().min(100),
   dependents: number().required().min(0).max(5),
   acceptedTermsAndConditions: boolean().oneOf([true]),
+  investmentRisk: array(string().oneOf(['High', 'Medium', 'Low'])).min(1),
 });
 
 export const FormDemo = () => {
