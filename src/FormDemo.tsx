@@ -88,6 +88,12 @@ export const FormDemo = () => {
                     value='Low'
                     label='Low - Safe'
                   />
+                  {/* If you click Very low checkbox, you will see "investmentRisk[0] must be one of the following values: High, Medium, Low" error */}
+                  <MyCheckbox
+                    name='investmentRisk'
+                    value='Very low'
+                    label='Very low'
+                  />
                 </FormGroup>
               </Box>
 
