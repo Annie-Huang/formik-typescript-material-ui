@@ -12,7 +12,7 @@ import { Field, Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 import { MyCheckbox } from './MyCheckbox';
 import * as Yup from 'yup';
-import { array, boolean, number, string } from 'yup';
+import { array, boolean, mixed, number, string } from 'yup';
 
 const initialValues: InvestmentDetails = {
   fullName: '',
@@ -29,6 +29,23 @@ const FORM_VALIDATION = Yup.object().shape({
   dependents: number().required().min(0).max(5),
   acceptedTermsAndConditions: boolean().oneOf([true]),
   investmentRisk: array(string().oneOf(['High', 'Medium', 'Low'])).min(1),
+  // This original code is not working:
+  // commentAboutInvestmentRisk: mixed().when('investmentRisk', {
+  //   is: (investmentRisk: string[]) =>
+  //     investmentRisk.find((ir) => ir === 'High'),
+  //   then: string().required().min(20).max(100),
+  //   otherwise: string().min(20).max(100),
+  // }),
+
+  // https://stackoverflow.com/questions/54919228/conditional-validation-with-yup-and-formik
+  commentAboutInvestmentRisk: string().when(
+    'investmentRisk',
+    ([investmentRisk]) => {
+      if (investmentRisk.some((ir: string) => ir === 'High'))
+        return string().required().min(20).max(100);
+      return string().min(20).max(100);
+    },
+  ),
 });
 
 export const FormDemo = () => {

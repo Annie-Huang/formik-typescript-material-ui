@@ -25,3 +25,13 @@ PS C:\react\formik-typescript-material-ui> npm install @mui/material @emotion/re
 PS C:\react\formik-typescript-material-ui> npm install @mui/material @mui/styled-engine-sc styled-components
 PS C:\react\formik-typescript-material-ui> npm install formik --save
 PS C:\react\formik-typescript-material-ui> npm install yup --save
+
+Conditional adding extra validation:
+  commentAboutInvestmentRisk: string().when(
+    'investmentRisk',
+    ([investmentRisk]) => {
+      if (investmentRisk.some((ir: string) => ir === 'High'))
+        return string().required().min(20).max(100);
+      return string().min(20).max(100);
+    },
+  ),
