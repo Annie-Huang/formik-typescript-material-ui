@@ -201,7 +201,11 @@ export const FormDemo = () => {
                 </FormGroup>
               </Box>
 
-              <Button type='submit' variant='contained' disabled={isSubmitting}>
+              <Button
+                type='submit'
+                variant='contained'
+                disabled={isSubmitting || isValidating}
+              >
                 Submit
               </Button>
 
