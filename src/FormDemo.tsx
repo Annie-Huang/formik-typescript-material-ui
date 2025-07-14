@@ -84,6 +84,7 @@ export const FormDemo = () => {
                     label='Initial Investment'
                     variant='standard'
                   />
+                  <ErrorMessage name='initialInvestment' />
                 </FormGroup>
               </Box>
 
@@ -114,6 +115,7 @@ export const FormDemo = () => {
                     label='Very low'
                   />
                 </FormGroup>
+                <ErrorMessage name='investmentRisk' />
               </Box>
 
               <Box sx={{ mb: 2 }}>
@@ -128,6 +130,7 @@ export const FormDemo = () => {
                     variant='standard'
                     label='Comment About Investment Risk'
                   />
+                  <ErrorMessage name='commentAboutInvestmentRisk' />
                 </FormGroup>
               </Box>
 
@@ -155,6 +158,7 @@ export const FormDemo = () => {
                     <MenuItem value={4}>4</MenuItem>
                     <MenuItem value={5}>5</MenuItem>
                   </Field>
+                  <ErrorMessage name='dependents' />
                 </FormGroup>
               </Box>
 
@@ -166,6 +170,7 @@ export const FormDemo = () => {
                     name='acceptedTermsAndConditions'
                     label='Accept terms and conditions'
                   />
+                  <ErrorMessage name='acceptedTermsAndConditions' />
                 </FormGroup>
               </Box>
 
