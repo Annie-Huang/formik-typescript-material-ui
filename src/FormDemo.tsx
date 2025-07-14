@@ -195,7 +195,9 @@ export const FormDemo = () => {
                 </FormGroup>
               </Box>
 
-              <Button type='submit'>Submit</Button>
+              <Button type='submit' variant='contained'>
+                Submit
+              </Button>
 
               <pre>{JSON.stringify(errors, null, 4)}</pre>
               <pre>{JSON.stringify(values, null, 4)}</pre>
