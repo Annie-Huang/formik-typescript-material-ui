@@ -57,13 +57,19 @@ const FORM_VALIDATION = Yup.object().shape({
 });
 
 export const FormDemo = () => {
-  const onSubmit = (
+  const onSubmit = async (
     values: InvestmentDetails,
     formikHelpers: FormikHelpers<InvestmentDetails>,
   ) => {
-    console.log('values = ', values);
-    console.log('formikHelpers = ', formikHelpers);
-    console.log('---------');
+    // console.log('get into here....');
+    return new Promise((res: any) => {
+      setTimeout(() => {
+        console.log(values);
+        console.log(formikHelpers);
+        console.log('---------');
+        res();
+      }, 1000);
+    });
   };
 
   return (
@@ -195,7 +201,7 @@ export const FormDemo = () => {
                 </FormGroup>
               </Box>
 
-              <Button type='submit' variant='contained'>
+              <Button type='submit' variant='contained' disabled={isSubmitting}>
                 Submit
               </Button>
 
