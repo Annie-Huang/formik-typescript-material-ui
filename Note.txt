@@ -35,3 +35,5 @@ Conditional adding extra validation:
       return string().min(20).max(100);
     },
   ),
+
+{touched.fullName && errors.fullName ? errors.fullName : null} === <ErrorMessage name='fullName' />

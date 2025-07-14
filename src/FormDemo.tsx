@@ -8,7 +8,7 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { Field, Form, Formik } from 'formik';
+import { ErrorMessage, Field, Form, Formik } from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 import { MyCheckbox } from './MyCheckbox';
 import * as Yup from 'yup';
@@ -69,7 +69,8 @@ export const FormDemo = () => {
                     label='Full Name'
                     variant='standard'
                   />
-                  {touched.fullName && errors.fullName ? errors.fullName : null}
+                  {/*{touched.fullName && errors.fullName ? errors.fullName : null}*/}
+                  <ErrorMessage name='fullName' />
                 </FormGroup>
               </Box>
 
