@@ -151,6 +151,10 @@ export const FormDemo = () => {
                     select
                     variant='standard'
                   >
+                    {/* Need to add -1 item otherwise you will get
+                        MUI: You have provided an out-of-range value `-1` for the select (name="dependents") component. */}
+                    <MenuItem value={-1}>Select ...</MenuItem>
+
                     <MenuItem value={0}>0</MenuItem>
                     <MenuItem value={1}>1</MenuItem>
                     <MenuItem value={2}>2</MenuItem>
