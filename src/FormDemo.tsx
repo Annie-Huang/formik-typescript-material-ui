@@ -1,6 +1,7 @@
 import React from 'react';
 import {
   Box,
+  Button,
   Card,
   CardContent,
   FormGroup,
@@ -8,7 +9,14 @@ import {
   TextField,
   Typography,
 } from '@mui/material';
-import { ErrorMessage, Field, Form, Formik } from 'formik';
+import {
+  ErrorMessage,
+  Field,
+  Form,
+  Formik,
+  FormikBag,
+  FormikHelpers,
+} from 'formik';
 import { InvestmentDetails } from './InvestmentDetails';
 import { MyCheckbox } from './MyCheckbox';
 import * as Yup from 'yup';
@@ -49,6 +57,15 @@ const FORM_VALIDATION = Yup.object().shape({
 });
 
 export const FormDemo = () => {
+  const onSubmit = (
+    values: InvestmentDetails,
+    formikHelpers: FormikHelpers<InvestmentDetails>,
+  ) => {
+    console.log('values = ', values);
+    console.log('formikHelpers = ', formikHelpers);
+    console.log('---------');
+  };
+
   return (
     <Card>
       <CardContent>
@@ -56,7 +73,7 @@ export const FormDemo = () => {
         <Formik
           initialValues={initialValues}
           validationSchema={FORM_VALIDATION}
-          onSubmit={() => {}}
+          onSubmit={onSubmit}
         >
           {({ values, errors, isSubmitting, isValidating, touched }) => (
             <Form>
@@ -177,6 +194,8 @@ export const FormDemo = () => {
                   <ErrorMessage name='acceptedTermsAndConditions' />
                 </FormGroup>
               </Box>
+
+              <Button type='submit'>Submit</Button>
 
               <pre>{JSON.stringify(errors, null, 4)}</pre>
               <pre>{JSON.stringify(values, null, 4)}</pre>
