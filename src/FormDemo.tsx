@@ -58,7 +58,7 @@ export const FormDemo = () => {
           validationSchema={FORM_VALIDATION}
           onSubmit={() => {}}
         >
-          {({ values, errors, isSubmitting, isValidating }) => (
+          {({ values, errors, isSubmitting, isValidating, touched }) => (
             <Form>
               <Box sx={{ mb: 2 }}>
                 <FormGroup>
@@ -69,6 +69,7 @@ export const FormDemo = () => {
                     label='Full Name'
                     variant='standard'
                   />
+                  {touched.fullName && errors.fullName ? errors.fullName : null}
                 </FormGroup>
               </Box>
 
